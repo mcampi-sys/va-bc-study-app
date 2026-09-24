@@ -1,0 +1,296 @@
+[
+ {
+  "answer": "PICC",
+  "day": 1,
+  "id": "q1",
+  "options": [
+   "Short peripheral IV",
+   "Midline",
+   "PICC",
+   "Intraosseous"
+  ],
+  "question": "A patient needs 6 weeks of IV antibiotics that are safe for peripheral veins. Which device fits best?",
+  "reasoning": "Midlines dwell roughly 1-4 weeks. At 6 weeks you need a long-term central device, so PICC.",
+  "topic": "device selection",
+  "type": "mc"
+ },
+ {
+  "answer": "Basilic",
+  "day": 1,
+  "id": "q2",
+  "options": [
+   "Cephalic",
+   "Basilic",
+   "Median cubital",
+   "Axillary"
+  ],
+  "question": "Which vein is the preferred insertion site for a PICC?",
+  "reasoning": "The basilic is the largest arm vein with the straightest course to the SVC and the lowest thrombosis risk.",
+  "topic": "anatomy",
+  "type": "mc"
+ },
+ {
+  "answer": "Outer diameter; about 2.3 mm",
+  "day": 1,
+  "id": "q3",
+  "question": "What does the French scale measure on a catheter? A triple-lumen CVC is labeled 7 Fr \u2014 roughly how many millimeters is that?",
+  "reasoning": "French measures outer diameter. 1 Fr = ~0.33 mm, so 7 Fr is about 2.3 mm.",
+  "topic": "catheter sizing",
+  "type": "short"
+ },
+ {
+  "answer": "900 mOsm/L",
+  "day": 1,
+  "id": "q4",
+  "options": [
+   "600 mOsm/L",
+   "900 mOsm/L",
+   "1200 mOsm/L",
+   "1500 mOsm/L"
+  ],
+  "question": "What is the maximum osmolarity recommended for infusion through a peripheral vein?",
+  "reasoning": "900 mOsm/L is the taught peripheral ceiling. Anything hotter risks chemical phlebitis and needs central access.",
+  "topic": "infusion limits",
+  "type": "mc"
+ },
+ {
+  "answer": "5-9",
+  "day": 1,
+  "id": "q5",
+  "options": [
+   "3-11",
+   "5-9",
+   "6-8",
+   "4-10"
+  ],
+  "question": "What pH range is considered safe for peripheral infusion?",
+  "reasoning": "Infusates outside pH 5-9 damage the vein endothelium, so they require central administration.",
+  "topic": "infusion limits",
+  "type": "mc"
+ },
+ {
+  "answer": "Lower third of the SVC at the cavoatrial junction; not the right atrium",
+  "day": 1,
+  "id": "q6",
+  "question": "Where should the tip of a central venous catheter terminate \u2014 and where should it NOT go?",
+  "reasoning": "The cavoatrial junction gives reliable central delivery. The right atrium risks arrhythmia and perforation.",
+  "topic": "tip position",
+  "type": "short"
+ },
+ {
+  "answer": "Hickman",
+  "day": 1,
+  "id": "q7",
+  "options": [
+   "PICC",
+   "Non-tunneled triple-lumen CVC",
+   "Hickman",
+   "Midline"
+  ],
+  "question": "Which of these is a tunneled central venous catheter?",
+  "reasoning": "Hickman (and Broviac) are tunneled cuffed catheters. PICCs are peripherally inserted, acute triple-lumens are non-tunneled, midlines are peripheral.",
+  "topic": "device types",
+  "type": "mc"
+ },
+ {
+  "answer": "Cephalic, basilic, median cubital",
+  "day": 1,
+  "id": "q8",
+  "question": "Name the three veins of the antecubital fossa commonly used for venipuncture.",
+  "reasoning": "These three superficial veins of the antecubital fossa are the standard venipuncture sites.",
+  "topic": "anatomy",
+  "type": "short"
+ },
+ {
+  "answer": "Antecubital fossa",
+  "day": 1,
+  "id": "q9",
+  "options": [
+   "Dorsal hand",
+   "Forearm",
+   "Antecubital fossa",
+   "Upper arm"
+  ],
+  "question": "For a routine peripheral IV, which area is best avoided as an insertion site?",
+  "reasoning": "It is an area of flexion: higher infiltration/phlebitis risk and it limits arm mobility.",
+  "topic": "site selection",
+  "type": "mc"
+ },
+ {
+  "answer": "Vein compresses easily and is non-pulsatile; artery pulsates and resists compression",
+  "day": 1,
+  "id": "q10",
+  "question": "During ultrasound-guided insertion, how do you tell a vein apart from an artery?",
+  "reasoning": "Compressibility plus absent pulsation identifies the vein; arteries pulsate and stay round under probe pressure.",
+  "topic": "ultrasound",
+  "type": "short"
+ },
+ {
+  "answer": "Vesicant extravasation causes blistering/tissue necrosis; irritant causes vein inflammation and pain without necrosis",
+  "day": 1,
+  "id": "q11",
+  "question": "What is the difference between a vesicant and an irritant?",
+  "reasoning": "The distinction is tissue death: vesicants necrose tissue if they leak, irritants inflame the vein but do not kill tissue.",
+  "topic": "complications",
+  "type": "short"
+ },
+ {
+  "answer": "Non-coring (Huber)",
+  "day": 1,
+  "id": "q12",
+  "options": [
+   "Standard hypodermic",
+   "Non-coring (Huber)",
+   "Spinal",
+   "Blunt fill"
+  ],
+  "question": "An implanted port must be accessed with what specific type of needle?",
+  "reasoning": "A standard bevel cores out the port septum; the Huber's deflected tip parts it without coring.",
+  "topic": "device types",
+  "type": "mc"
+ },
+ {
+  "answer": "To preserve veins for a future AV fistula for dialysis",
+  "day": 1,
+  "id": "q13",
+  "question": "Why should upper-extremity veins be preserved (PICC avoided when possible) in a patient with chronic kidney disease?",
+  "reasoning": "Arm veins are the future dialysis lifeline; damaging them can eliminate fistula options.",
+  "topic": "vessel preservation",
+  "type": "short"
+ },
+ {
+  "answer": "Axillary vein",
+  "day": 1,
+  "id": "q14",
+  "options": [
+   "Superior vena cava",
+   "Axillary vein",
+   "Right atrium",
+   "Subclavian vein"
+  ],
+  "question": "A midline catheter tip terminates in which vessel?",
+  "reasoning": "Midlines end at or below the axilla. A tip in the subclavian or beyond is central circulation, which makes it a PICC, not a midline.",
+  "topic": "tip position",
+  "type": "mc"
+ },
+ {
+  "answer": "Choose the least invasive device that meets the therapy needs while preserving future access sites",
+  "day": 1,
+  "id": "q15",
+  "question": "In one or two sentences: what does 'vessel health and preservation' mean when choosing a vascular access device?",
+  "reasoning": "It means matching device to therapy duration and invasiveness, and keeping tomorrow's options open.",
+  "topic": "vessel preservation",
+  "type": "short"
+ },
+ {
+  "answer": "Wrong \u2014 outer diameter, about 1.7 mm",
+  "day": 1,
+  "id": "q16",
+  "options": [
+   "Wrong \u2014 outer diameter, about 1.7 mm",
+   "Wrong \u2014 outer diameter, about 5 mm",
+   "Right \u2014 inner diameter, about 1.7 mm",
+   "Right \u2014 inner diameter, about 5 mm"
+  ],
+  "question": "A nurse says the '5 Fr' label on a midline catheter refers to its inner diameter. Is that right, and about how wide is the catheter?",
+  "reasoning": "French always measures OUTER diameter: 1 Fr \u2248 0.33 mm, so 5 Fr is about 1.7 mm. Inner diameter is gauge, not French.",
+  "topic": "catheter sizing (spaced repetition)",
+  "type": "mc"
+ },
+ {
+  "answer": "Stop the infusion and aspirate what you can back through the catheter",
+  "day": 1,
+  "id": "q17",
+  "options": [
+   "Slow the rate and apply heat to the site",
+   "Flush the line to check patency and continue",
+   "Stop the infusion and aspirate what you can back through the catheter",
+   "Pull the catheter out immediately without aspirating"
+  ],
+  "question": "During a chemo infusion you notice pain, blanching, and swelling around the site. What are the correct first actions?",
+  "reasoning": "Stop delivery of the vesicant first, then aspirate residual drug back through the catheter before removing it; this limits tissue exposure.",
+  "topic": "extravasation management",
+  "type": "mc"
+ },
+ {
+  "answer": "Chlorhexidine-based skin antisepsis (with adequate drying time)",
+  "day": 1,
+  "id": "q18",
+  "question": "Name the skin antiseptic required by the central-line bundle before CVC insertion \u2014 and why 'letting it dry' matters.",
+  "reasoning": "The bundle requires chlorhexidine (usually 2% chlorhexidine in alcohol). Full drying time is what lets it reach maximum antimicrobial effect; inserting wet cuts its efficacy.",
+  "topic": "CLABSI prevention",
+  "type": "short"
+ },
+ {
+  "answer": "Midline",
+  "day": 1,
+  "id": "q19",
+  "options": [
+   "Short PIV",
+   "Midline",
+   "PICC",
+   "Implanted port"
+  ],
+  "question": "A patient is ordered 10 days of IV antibiotics that are safe for peripheral veins. What is the most appropriate device?",
+  "reasoning": "Short PIVs dwell ~72-96 hours and would need restarts over 10 days. Midlines dwell roughly 1-4 weeks and fit peripheral-safe therapies of days to weeks. A PICC or port is central-device overkill with added thrombosis and infection risk.",
+  "topic": "device selection (spaced repetition)",
+  "type": "mc"
+ },
+ {
+  "answer": "Anchors the catheter via tissue ingrowth and blocks bacterial migration",
+  "day": 1,
+  "id": "q20",
+  "options": [
+   "Marks the entry depth for X-ray confirmation",
+   "Anchors the catheter via tissue ingrowth and blocks bacterial migration",
+   "Slowly releases antibiotics into the tunnel",
+   "Identifies the venous insertion point"
+  ],
+  "question": "A tunneled CVC such as a Hickman has a Dacron cuff along the subcutaneous segment. What is the cuff's purpose?",
+  "reasoning": "Tissue grows into the Dacron felt, fixing the catheter in place; it also creates a mechanical barrier that discourages bacteria from migrating down the tunnel.",
+  "topic": "device types",
+  "type": "mc"
+ },
+ {
+  "answer": "Push-pause (pulsatile/turbulent) flush, clamped or disconnected while pushing the last ~0.5 mL",
+  "day": 1,
+  "id": "q21",
+  "question": "You are locking an intermittent PIV after a medication. Name the flush technique, and explain what the \"positive pressure\" part is for.",
+  "reasoning": "Turbulent flow clears the lumen better than one steady push. Finishing under positive pressure (clamping/disconnecting while pushing the final 0.5 mL) prevents blood from refluxing into the tip and clotting it off.",
+  "topic": "line maintenance",
+  "type": "short"
+ },
+ {
+  "answer": "Central-only — peripheral floor is pH 5",
+  "day": 1,
+  "id": "q22",
+  "options": [
+   "Peripheral-safe — acceptable range is 2-11",
+   "Central-only — peripheral floor is pH 5",
+   "Peripheral-safe — anything below pH 5 is fine if the rate is slow",
+   "Central-only — every infusate must be exactly pH 7.4"
+  ],
+  "question": "An infusate has a pH of 4.2. What does the peripheral pH rule say — peripheral-safe or central-only?",
+  "reasoning": "Peripheral infusates must be pH 5-9. Below pH 5 the infusate damages the vein endothelium (chemical phlebitis), so it needs central access.",
+  "topic": "infusion limits (spaced repetition)",
+  "type": "mc"
+ },
+ {
+  "answer": "No — central line; peripheral ceiling is 900 mOsm/L",
+  "day": 1,
+  "id": "q23",
+  "question": "An IV medication is labeled 1400 mOsm/L. Can it run peripherally? State the rule.",
+  "reasoning": "Infusates above 900 mOsm/L risk chemical phlebitis in peripheral veins and must go through a central device.",
+  "topic": "infusion limits (spaced repetition)",
+  "type": "short"
+ },
+ {
+  "answer": "Scrub 15 seconds with friction using alcohol-based antiseptic, then let it dry fully",
+  "day": 1,
+  "id": "q24",
+  "question": "Before accessing a needleless connector, how long do you scrub it — and what do you do right after?",
+  "reasoning": "Scrub-the-hub disinfects the connector surface; accessing before it dries drags organisms into the lumen.",
+  "topic": "line maintenance",
+  "type": "short"
+ }
+]

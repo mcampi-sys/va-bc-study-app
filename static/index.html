@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VA-BC Study</title>
+<style>
+  :root { --bg:#fafafa; --card:#fff; --ink:#1c1c1e; --muted:#8e8e93;
+          --accent:#007aff; --good:#34c759; --bad:#ff3b30; --line:#e5e5ea; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font-family:-apple-system,system-ui,"Segoe UI",Roboto,sans-serif;
+         background:var(--bg); color:var(--ink); }
+  header { position:sticky; top:0; background:var(--card); border-bottom:1px solid var(--line);
+           padding:14px 16px; font-size:20px; font-weight:700; z-index:5; }
+  header small { display:block; font-size:12px; font-weight:400; color:var(--muted); }
+  main { max-width:640px; margin:0 auto; padding:12px 12px 48px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px;
+          padding:16px; margin-bottom:10px; }
+  .q { font-size:19px; line-height:1.45; font-weight:600; margin:0; }
+  .chip { display:inline-block; font-size:12px; color:var(--muted);
+          text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px; }
+  .prog { font-size:14px; color:var(--muted); margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; font-size:18px;
+         padding:18px 16px; margin:0 0 10px; border-radius:14px;
+         border:2px solid var(--line); background:var(--card); color:var(--ink);
+         min-height:60px; cursor:pointer; }
+  .opt:active { border-color:var(--accent); background:#f0f7ff; }
+  .big { display:block; width:100%; font-size:19px; font-weight:700; padding:18px;
+         border-radius:14px; border:none; background:var(--accent); color:#fff;
+         margin:0 0 10px; min-height:60px; cursor:pointer; }
+  .big:disabled { opacity:.4; }
+  .big.ghost { background:var(--card); color:var(--accent); border:2px solid var(--line); }
+  textarea { width:100%; min-height:110px; font-size:17px; padding:12px;
+             border:2px solid var(--line); border-radius:12px; font-family:inherit;
+             margin:8px 0 10px; }
+  textarea:focus { outline:none; border-color:var(--accent); }
+  .verdict-ok { border-left:6px solid var(--good); }
+  .verdict-bad { border-left:6px solid var(--bad); }
+  .verdict h2 { margin:0 0 8px; font-size:22px; }
+  .ans { font-size:17px; line-height:1.45; margin:10px 0; }
+  .ans b { display:block; font-size:13px; text-transform:uppercase;
+           letter-spacing:.05em; color:var(--muted); margin-bottom:2px; }
+  .dots { display:flex; gap:6px; margin-top:8px; }
+  .dot { width:14px; height:14px; border-radius:50%; background:var(--line); }
+  .dot.done { background:var(--accent); }
+  .stat { display:flex; gap:10px; margin-bottom:10px; }
+  .stat .card { flex:1; text-align:center; margin:0; padding:12px 8px; }
+  .stat .n { font-size:26px; font-weight:700; }
+  .stat .l { font-size:12px; color:var(--muted); }
+  .label { font-size:16px; font-weight:600; margin:10px 0 2px; }
+  .hint { font-size:14px; color:var(--muted); margin:4px 0 0; }
+</style>
+</head>
+<body>
+<header>VA-BC Study<small>tap-to-answer quizzes</small></header>
+<main id="app"></main>
+<script>
+const app = document.getElementById('app');
+let S = null; // {id, mode, questions, idx, correct}
+
+async function api(path, body) {
+  const r = await fetch(path, {method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(body || {})});
+  return r.json();
+}
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"]/g,
+    c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+}
+
+// ---------- home ----------
+async function home() {
+  const p = await (await fetch('/api/progress')).json();
+  const dots = Array.from({length: p.sessions_goal},
+    (_, i) => `<span class="dot${i < p.sessions_today ? ' done' : ''}"></span>`).join('');
+  app.innerHTML = `
+    <div class="stat">
+      <div class="card"><div class="n">${p.counts.mastered}</div><div class="l">mastered</div></div>
+      <div class="card"><div class="n">${p.needs_review}</div><div class="l">to review</div></div>
+      <div class="card"><div class="n">${p.counts.unseen}</div><div class="l">unseen</div></div>
+    </div>
+    <div class="card">
+      <div class="prog">Sessions today: ${p.sessions_today} of ${p.sessions_goal}</div>
+      <div class="dots">${dots}</div>
+    </div>
+    <button class="big" id="b-quiz">Start quiz session</button>
+    <button class="big ghost" id="b-review" ${p.needs_review ? '' : 'disabled'}>
+      ${p.needs_review ? `Review test (${p.needs_review})` : 'Review test — all clear 🎉'}</button>`;
+  document.getElementById('b-quiz').onclick = () => startSession('quiz');
+  document.getElementById('b-review').onclick = () => startSession('review');
+  window.scrollTo(0, 0);
+}
+
+// ---------- session ----------
+async function startSession(mode) {
+  const r = await api('/api/session', {mode});
+  if (!r.session_id || !r.questions.length) {
+    app.innerHTML = `<div class="card"><p class="q">No questions available.</p></div>
+      <button class="big ghost" id="b-back">Back home</button>`;
+    document.getElementById('b-back').onclick = home;
+    return;
+  }
+  S = {id: r.session_id, mode, questions: r.questions, idx: 0, correct: 0};
+  showQuestion();
+}
+
+function progLine() {
+  return `<div class="prog">Question ${S.idx + 1} of ${S.questions.length}</div>`;
+}
+
+function showQuestion() {
+  const q = S.questions[S.idx];
+  const head = `<div class="card"><div class="chip">${esc(q.topic)}</div>`
+    + progLine() + `<p class="q">${esc(q.question)}</p></div>`;
+  if (q.type === 'mc') {
+    app.innerHTML = head + q.options.map(o =>
+      `<button class="opt" data-o="${esc(o)}">${esc(o)}</button>`).join('');
+    app.querySelectorAll('.opt').forEach(b =>
+      b.onclick = () => gradeMC(q, b.dataset.o));
+  } else {
+    app.innerHTML = head +
+      `<textarea id="sa" placeholder="Type your answer…"></textarea>
+       <button class="big" id="b-check">Check answer</button>`;
+    document.getElementById('b-check').onclick = () => selfGrade(q);
+  }
+  window.scrollTo(0, 0);
+}
+
+async function gradeMC(q, selected) {
+  const r = await api('/api/check', {question_id: q.id, selected});
+  if (r.correct) {
+    await api('/api/record', {session_id: S.id, question_id: q.id,
+      correct: true, user_answer: selected});
+    S.correct++;
+    feedback(q, r.reasoning);
+  } else {
+    missFlow(q, r.answer, r.reasoning, selected);
+  }
+}
+
+async function selfGrade(q) {
+  const mine = document.getElementById('sa').value.trim();
+  if (!mine) return;
+  const r = await api('/api/reveal', {question_id: q.id});
+  app.innerHTML =
+    `<div class="card"><div class="chip">${esc(q.topic)}</div>` + progLine() +
+    `<p class="q">${esc(q.question)}</p></div>
+     <div class="card">
+       <div class="ans"><b>Your answer</b>${esc(mine)}</div>
+       <div class="ans"><b>Correct answer</b>${esc(r.answer)}</div>
+       <div class="ans"><b>Why</b>${esc(r.reasoning)}</div>
+     </div>
+     <div class="card"><p class="label">Did you get it right?</p>
+       <p class="hint">Be honest — missed ones come back in review.</p></div>
+     <button class="big" id="b-yes">Yes, I got it</button>
+     <button class="big ghost" id="b-no">No, I missed it</button>`;
+  document.getElementById('b-yes').onclick = async () => {
+    await api('/api/record', {session_id: S.id, question_id: q.id,
+      correct: true, user_answer: mine});
+    S.correct++;
+    feedback(q, r.reasoning);
+  };
+  document.getElementById('b-no').onclick = () =>
+    missFlow(q, r.answer, r.reasoning, mine);
+  window.scrollTo(0, 0);
+}
+
+// correct answer: show reasoning, then next
+function feedback(q, reasoning) {
+  app.innerHTML = `<div class="card verdict verdict-ok"><h2>✓ Correct</h2>
+      <div class="ans"><b>Why</b>${esc(reasoning)}</div></div>
+    <button class="big" id="b-next">${S.idx + 1 < S.questions.length ? 'Next →' : 'Finish'}</button>`;
+  document.getElementById('b-next').onclick = nextQ;
+  window.scrollTo(0, 0);
+}
+
+// wrong answer: show correct answer + reasoning, require own-words rewrite
+function missFlow(q, answer, reasoning, mine) {
+  app.innerHTML = `<div class="card verdict verdict-bad"><h2>Not quite</h2>
+      <div class="ans"><b>Correct answer</b>${esc(answer)}</div>
+      <div class="ans"><b>Why</b>${esc(reasoning)}</div></div>
+    <div class="card">
+      <p class="label">Now type the reasoning in your own words:</p>
+      <p class="hint">Writing it yourself is what makes it stick.</p>
+      <textarea id="own" placeholder="In my own words…"></textarea>
+      <button class="big" id="b-cont" disabled>Continue →</button></div>`;
+  const ta = document.getElementById('own');
+  const btn = document.getElementById('b-cont');
+  ta.oninput = () => { btn.disabled = !ta.value.trim(); };
+  btn.onclick = async () => {
+    await api('/api/record', {session_id: S.id, question_id: q.id,
+      correct: false, user_answer: mine || '', own_words: ta.value.trim()});
+    nextQ();
+  };
+  window.scrollTo(0, 0);
+}
+
+async function nextQ() {
+  S.idx++;
+  if (S.idx < S.questions.length) { showQuestion(); return; }
+  const r = await api('/api/session/finish', {session_id: S.id});
+  app.innerHTML = `<div class="card"><h2 style="margin:0 0 8px">Session complete 🎉</h2>
+      <p style="font-size:20px;margin:0">You got <b>${r.correct} of ${r.total}</b> right.</p>
+      <p class="hint">Missed ones will come back in review.</p></div>
+    <button class="big" id="b-home">Back home</button>`;
+  document.getElementById('b-home').onclick = home;
+  S = null;
+  window.scrollTo(0, 0);
+}
+
+home();
+</script>
+</body>
+</html>

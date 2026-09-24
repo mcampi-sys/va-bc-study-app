@@ -33,7 +33,7 @@
   "answer": "Outer diameter; about 2.3 mm",
   "day": 1,
   "id": "q3",
-  "question": "What does the French scale measure on a catheter? A triple-lumen CVC is labeled 7 Fr \u2014 roughly how many millimeters is that?",
+  "question": "What does the French scale measure on a catheter? A triple-lumen CVC is labeled 7 Fr — roughly how many millimeters is that?",
   "reasoning": "French measures outer diameter. 1 Fr = ~0.33 mm, so 7 Fr is about 2.3 mm.",
   "topic": "catheter sizing",
   "type": "short"
@@ -72,7 +72,7 @@
   "answer": "Lower third of the SVC at the cavoatrial junction; not the right atrium",
   "day": 1,
   "id": "q6",
-  "question": "Where should the tip of a central venous catheter terminate \u2014 and where should it NOT go?",
+  "question": "Where should the tip of a central venous catheter terminate — and where should it NOT go?",
   "reasoning": "The cavoatrial junction gives reliable central delivery. The right atrium risks arrhythmia and perforation.",
   "topic": "tip position",
   "type": "short"
@@ -183,17 +183,17 @@
   "type": "short"
  },
  {
-  "answer": "Wrong \u2014 outer diameter, about 1.7 mm",
+  "answer": "Wrong — outer diameter, about 1.7 mm",
   "day": 1,
   "id": "q16",
   "options": [
-   "Wrong \u2014 outer diameter, about 1.7 mm",
-   "Wrong \u2014 outer diameter, about 5 mm",
-   "Right \u2014 inner diameter, about 1.7 mm",
-   "Right \u2014 inner diameter, about 5 mm"
+   "Wrong — outer diameter, about 1.7 mm",
+   "Wrong — outer diameter, about 5 mm",
+   "Right — inner diameter, about 1.7 mm",
+   "Right — inner diameter, about 5 mm"
   ],
   "question": "A nurse says the '5 Fr' label on a midline catheter refers to its inner diameter. Is that right, and about how wide is the catheter?",
-  "reasoning": "French always measures OUTER diameter: 1 Fr \u2248 0.33 mm, so 5 Fr is about 1.7 mm. Inner diameter is gauge, not French.",
+  "reasoning": "French always measures OUTER diameter: 1 Fr ≈ 0.33 mm, so 5 Fr is about 1.7 mm. Inner diameter is gauge, not French.",
   "topic": "catheter sizing (spaced repetition)",
   "type": "mc"
  },
@@ -216,7 +216,7 @@
   "answer": "Chlorhexidine-based skin antisepsis (with adequate drying time)",
   "day": 1,
   "id": "q18",
-  "question": "Name the skin antiseptic required by the central-line bundle before CVC insertion \u2014 and why 'letting it dry' matters.",
+  "question": "Name the skin antiseptic required by the central-line bundle before CVC insertion — and why 'letting it dry' matters.",
   "reasoning": "The bundle requires chlorhexidine (usually 2% chlorhexidine in alcohol). Full drying time is what lets it reach maximum antimicrobial effect; inserting wet cuts its efficacy.",
   "topic": "CLABSI prevention",
   "type": "short"
@@ -261,22 +261,22 @@
   "type": "short"
  },
  {
-  "answer": "Central-only \u2014 peripheral floor is pH 5",
+  "answer": "Central-only — peripheral floor is pH 5",
   "day": 1,
   "id": "q22",
   "options": [
-   "Peripheral-safe \u2014 acceptable range is 2-11",
-   "Central-only \u2014 peripheral floor is pH 5",
-   "Peripheral-safe \u2014 anything below pH 5 is fine if the rate is slow",
-   "Central-only \u2014 every infusate must be exactly pH 7.4"
+   "Peripheral-safe — acceptable range is 2-11",
+   "Central-only — peripheral floor is pH 5",
+   "Peripheral-safe — anything below pH 5 is fine if the rate is slow",
+   "Central-only — every infusate must be exactly pH 7.4"
   ],
-  "question": "An infusate has a pH of 4.2. What does the peripheral pH rule say \u2014 peripheral-safe or central-only?",
+  "question": "An infusate has a pH of 4.2. What does the peripheral pH rule say — peripheral-safe or central-only?",
   "reasoning": "Peripheral infusates must be pH 5-9. Below pH 5 the infusate damages the vein endothelium (chemical phlebitis), so it needs central access.",
   "topic": "infusion limits (spaced repetition)",
   "type": "mc"
  },
  {
-  "answer": "No \u2014 central line; peripheral ceiling is 900 mOsm/L",
+  "answer": "No — central line; peripheral ceiling is 900 mOsm/L",
   "day": 1,
   "id": "q23",
   "question": "An IV medication is labeled 1400 mOsm/L. Can it run peripherally? State the rule.",
@@ -288,13 +288,13 @@
   "answer": "Scrub 15 seconds with friction using alcohol-based antiseptic, then let it dry fully",
   "day": 1,
   "id": "q24",
-  "question": "Before accessing a needleless connector, how long do you scrub it \u2014 and what do you do right after?",
+  "question": "Before accessing a needleless connector, how long do you scrub it — and what do you do right after?",
   "reasoning": "Scrub-the-hub disinfects the connector surface; accessing before it dries drags organisms into the lumen.",
   "topic": "line maintenance",
   "type": "short"
  },
  {
-  "answer": "No \u2014 subclavian tip makes it a central device; a midline tip must end at or below the axillary vein",
+  "answer": "No — subclavian tip makes it a central device; a midline tip must end at or below the axillary vein",
   "day": 1,
   "id": "q25",
   "question": "A catheter tip is confirmed in the subclavian vein. Can this be correctly placed as a midline? State the tip rule.",
@@ -303,7 +303,7 @@
   "type": "short"
  },
  {
-  "answer": "\u226445% (about 1:3 catheter-to-vein ratio)",
+  "answer": "≤45% (about 1:3 catheter-to-vein ratio)",
   "day": 1,
   "id": "q26",
   "question": "INS recommends a catheter occupy no more than what percentage of the vein's inner diameter?",
@@ -312,17 +312,17 @@
   "type": "short"
  },
  {
-  "answer": "Central culture turns positive \u22652 h before the peripheral culture, same organism",
+  "answer": "Central culture turns positive ≥2 h before the peripheral culture, same organism",
   "day": 1,
   "id": "q27",
   "options": [
-   "Peripheral turns positive \u22652 h before the line culture",
-   "Central culture turns positive \u22652 h before the peripheral culture, same organism",
+   "Peripheral turns positive ≥2 h before the line culture",
+   "Central culture turns positive ≥2 h before the peripheral culture, same organism",
    "Growth only on the peripheral culture",
    "Both cultures negative"
   ],
   "question": "Paired blood cultures (one from the line, one peripheral) are drawn for suspected CRBSI. Which result confirms a catheter-related infection?",
-  "reasoning": "Differential time to positivity \u22652 hours pinpoints the catheter as the bacterial source.",
+  "reasoning": "Differential time to positivity ≥2 hours pinpoints the catheter as the bacterial source.",
   "topic": "CLABSI diagnosis",
   "type": "mc"
  },
@@ -469,5 +469,20 @@
   ],
   "answer": "Internal jugular -> brachiocephalic -> SVC -> right atrium",
   "reasoning": "The internal jugular joins the subclavian to form the brachiocephalic, which drains through the SVC into the right atrium."
+ },
+ {
+  "id": "q38",
+  "day": 2,
+  "topic": "line maintenance",
+  "type": "mc",
+  "question": "You arrive for a scheduled central line dressing change and the patient was discharged before you saw them. What do you do?",
+  "options": [
+   "Discharged before seeing — document the missed change, confirm dressing-care teaching was done, and hand off",
+   "Chart the dressing as changed so the schedule stays on track",
+   "Go to the patient's home to change it yourself",
+   "Do nothing — discharged patients are no longer your concern"
+  ],
+  "answer": "Discharged before seeing — document the missed change, confirm dressing-care teaching was done, and hand off",
+  "reasoning": "You cannot change a dressing on a patient who is not there, and you never chart care you did not give. Document the missed dressing change honestly, make sure discharge teaching covered dressing care and warning signs, and hand off to the receiving team or home care."
  }
 ]

@@ -261,22 +261,22 @@
   "type": "short"
  },
  {
-  "answer": "Central-only — peripheral floor is pH 5",
+  "answer": "Central-only \u2014 peripheral floor is pH 5",
   "day": 1,
   "id": "q22",
   "options": [
-   "Peripheral-safe — acceptable range is 2-11",
-   "Central-only — peripheral floor is pH 5",
-   "Peripheral-safe — anything below pH 5 is fine if the rate is slow",
-   "Central-only — every infusate must be exactly pH 7.4"
+   "Peripheral-safe \u2014 acceptable range is 2-11",
+   "Central-only \u2014 peripheral floor is pH 5",
+   "Peripheral-safe \u2014 anything below pH 5 is fine if the rate is slow",
+   "Central-only \u2014 every infusate must be exactly pH 7.4"
   ],
-  "question": "An infusate has a pH of 4.2. What does the peripheral pH rule say — peripheral-safe or central-only?",
+  "question": "An infusate has a pH of 4.2. What does the peripheral pH rule say \u2014 peripheral-safe or central-only?",
   "reasoning": "Peripheral infusates must be pH 5-9. Below pH 5 the infusate damages the vein endothelium (chemical phlebitis), so it needs central access.",
   "topic": "infusion limits (spaced repetition)",
   "type": "mc"
  },
  {
-  "answer": "No — central line; peripheral ceiling is 900 mOsm/L",
+  "answer": "No \u2014 central line; peripheral ceiling is 900 mOsm/L",
   "day": 1,
   "id": "q23",
   "question": "An IV medication is labeled 1400 mOsm/L. Can it run peripherally? State the rule.",
@@ -288,9 +288,186 @@
   "answer": "Scrub 15 seconds with friction using alcohol-based antiseptic, then let it dry fully",
   "day": 1,
   "id": "q24",
-  "question": "Before accessing a needleless connector, how long do you scrub it — and what do you do right after?",
+  "question": "Before accessing a needleless connector, how long do you scrub it \u2014 and what do you do right after?",
   "reasoning": "Scrub-the-hub disinfects the connector surface; accessing before it dries drags organisms into the lumen.",
   "topic": "line maintenance",
   "type": "short"
+ },
+ {
+  "answer": "No \u2014 subclavian tip makes it a central device; a midline tip must end at or below the axillary vein",
+  "day": 1,
+  "id": "q25",
+  "question": "A catheter tip is confirmed in the subclavian vein. Can this be correctly placed as a midline? State the tip rule.",
+  "reasoning": "Midlines are peripheral devices; a tip past the axilla is in central circulation, so it is a PICC, not a midline, and must meet central-line tip requirements (SVC/CAJ).",
+  "topic": "tip position (spaced repetition)",
+  "type": "short"
+ },
+ {
+  "answer": "\u226445% (about 1:3 catheter-to-vein ratio)",
+  "day": 1,
+  "id": "q26",
+  "question": "INS recommends a catheter occupy no more than what percentage of the vein's inner diameter?",
+  "reasoning": "Leaving most of the lumen open keeps blood flowing around the catheter, reducing stasis and thrombosis risk.",
+  "topic": "thrombosis prevention",
+  "type": "short"
+ },
+ {
+  "answer": "Central culture turns positive \u22652 h before the peripheral culture, same organism",
+  "day": 1,
+  "id": "q27",
+  "options": [
+   "Peripheral turns positive \u22652 h before the line culture",
+   "Central culture turns positive \u22652 h before the peripheral culture, same organism",
+   "Growth only on the peripheral culture",
+   "Both cultures negative"
+  ],
+  "question": "Paired blood cultures (one from the line, one peripheral) are drawn for suspected CRBSI. Which result confirms a catheter-related infection?",
+  "reasoning": "Differential time to positivity \u22652 hours pinpoints the catheter as the bacterial source.",
+  "topic": "CLABSI diagnosis",
+  "type": "mc"
+ },
+ {
+  "id": "q28",
+  "day": 2,
+  "type": "mc",
+  "topic": "anatomy",
+  "question": "A PICC placed in the basilic vein travels through which vessels, in order, to reach the superior vena cava?",
+  "options": [
+   "Basilic -> axillary -> subclavian -> brachiocephalic -> SVC",
+   "Basilic -> cephalic -> axillary -> subclavian -> SVC",
+   "Basilic -> brachial -> cephalic -> brachiocephalic -> SVC",
+   "Basilic -> subclavian -> axillary -> brachiocephalic -> SVC"
+  ],
+  "answer": "Basilic -> axillary -> subclavian -> brachiocephalic -> SVC",
+  "reasoning": "Venous return from the arm runs basilic -> axillary -> subclavian -> brachiocephalic -> SVC -> right atrium. Trace the route in order and the tip destination makes sense."
+ },
+ {
+  "id": "q29",
+  "day": 2,
+  "type": "mc",
+  "topic": "anatomy",
+  "question": "The axillary vein is formed by the union of which two veins?",
+  "options": [
+   "Basilic and brachial",
+   "Cephalic and basilic",
+   "Subclavian and cephalic",
+   "Brachial and cephalic"
+  ],
+  "answer": "Basilic and brachial",
+  "reasoning": "The basilic joins the paired brachial veins to become the axillary vein. The cephalic joins the axillary separately, higher up near the shoulder."
+ },
+ {
+  "id": "q30",
+  "day": 2,
+  "type": "mc",
+  "topic": "anatomy",
+  "question": "The superior vena cava is formed by the junction of which veins?",
+  "options": [
+   "Right and left brachiocephalic veins",
+   "Right and left subclavian veins",
+   "Right and left internal jugular veins",
+   "Subclavian and internal jugular on the right only"
+  ],
+  "answer": "Right and left brachiocephalic veins",
+  "reasoning": "The two brachiocephalic veins unite to form the SVC, the final common path for upper-body venous return to the right atrium."
+ },
+ {
+  "id": "q31",
+  "day": 2,
+  "type": "mc",
+  "topic": "anatomy",
+  "question": "The basilic vein runs along which aspect of the arm?",
+  "options": [
+   "Medial",
+   "Lateral",
+   "Anterior",
+   "Posterior"
+  ],
+  "answer": "Medial",
+  "reasoning": "Basilic = medial (runs along the inner arm, 'by your side'); cephalic = lateral (outer arm)."
+ },
+ {
+  "id": "q32",
+  "day": 2,
+  "type": "mc",
+  "topic": "anatomy",
+  "question": "Why is the cephalic vein a second-choice vessel for PICC insertion?",
+  "options": [
+   "It is tortuous, has more valves, and joins the axillary at a sharp angle",
+   "It is the largest vein in the arm",
+   "It drains directly into the SVC",
+   "It has no valves and follows a straight course"
+  ],
+  "answer": "It is tortuous, has more valves, and joins the axillary at a sharp angle",
+  "reasoning": "The cephalic's tortuosity, extra valves, and near-90-degree junction with the axillary make catheter advancement harder and raise complication risk."
+ },
+ {
+  "id": "q33",
+  "day": 2,
+  "type": "short",
+  "topic": "anatomy",
+  "question": "Name the three layers of a blood vessel wall from innermost to outermost.",
+  "answer": "Tunica intima, tunica media, tunica adventitia",
+  "reasoning": "Intima (endothelium) touches the blood, media is smooth muscle, adventitia is the outer connective tissue. Intimal injury is what invites thrombosis."
+ },
+ {
+  "id": "q34",
+  "day": 2,
+  "type": "mc",
+  "topic": "anatomy",
+  "question": "What is the primary function of venous valves?",
+  "options": [
+   "Prevent retrograde blood flow",
+   "Increase arterial pressure",
+   "Filter bacteria from the blood",
+   "Regulate heart rate"
+  ],
+  "answer": "Prevent retrograde blood flow",
+  "reasoning": "Valves keep venous blood moving toward the heart against gravity. They are most numerous in the extremities."
+ },
+ {
+  "id": "q35",
+  "day": 2,
+  "type": "mc",
+  "topic": "anatomy",
+  "question": "In the femoral triangle (mnemonic NAVEL, lateral to medial), the femoral vein lies ___ to the femoral artery.",
+  "options": [
+   "Medial",
+   "Lateral",
+   "Anterior",
+   "Posterior"
+  ],
+  "answer": "Medial",
+  "reasoning": "NAVEL = Nerve, Artery, Vein, Empty space, Lymphatics from lateral to medial, so the vein sits medial to the artery."
+ },
+ {
+  "id": "q36",
+  "day": 2,
+  "type": "mc",
+  "topic": "anatomy",
+  "question": "The great saphenous vein is best described as...",
+  "options": [
+   "The longest vein in the body, running up the medial leg and thigh",
+   "A deep vein of the upper arm",
+   "The vein that becomes the subclavian at the first rib",
+   "A short vein in the antecubital fossa"
+  ],
+  "answer": "The longest vein in the body, running up the medial leg and thigh",
+  "reasoning": "The great saphenous is the body's longest vein, a lower-extremity vessel sometimes used for access when arm veins are exhausted."
+ },
+ {
+  "id": "q37",
+  "day": 2,
+  "type": "mc",
+  "topic": "anatomy",
+  "question": "A central catheter in the internal jugular vein advances through which vessels, in order, to reach the right atrium?",
+  "options": [
+   "Internal jugular -> brachiocephalic -> SVC -> right atrium",
+   "Internal jugular -> subclavian -> axillary -> SVC -> right atrium",
+   "Internal jugular -> external jugular -> brachiocephalic -> right atrium",
+   "Internal jugular -> SVC -> brachiocephalic -> right atrium"
+  ],
+  "answer": "Internal jugular -> brachiocephalic -> SVC -> right atrium",
+  "reasoning": "The internal jugular joins the subclavian to form the brachiocephalic, which drains through the SVC into the right atrium."
  }
 ]
